@@ -7,5 +7,5 @@ All input should be of the form ./universal_sort <function> <size> [element 1] [
 ### Sorting Functions
 Right now, there is only one function (compare_int). In the future, there may be more.
 
-#### compare_int
+##### compare_int
 This simply compares ints, and will order them from lowest to highest when used in UniversalSort.
