@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef int (*Comparison)(void* a, void* b);
+typedef int (*Comparison)(void* a, void* b); //Function used for comparisons.
 
 /* Returns a positive int if a > b, negative int if b > a, zero if equal
  * Arguments:
@@ -12,6 +12,7 @@ typedef int (*Comparison)(void* a, void* b);
 int compare_int(void* a, void* b){
 	return *(int*)a - *(int*)b;
 }
+
 /* Returns a function with a name matching the input string. Wish C had
  * a better way to do this (ie: reflection). Returns NULL if the function
  * does not exist.
@@ -93,7 +94,6 @@ int main(int argc, char** argv){
 	int i;
 	for(i = 0; i < num_elements; i++){
 		*((int*)(array + (i * size))) = atoi(argv[i + 3]);
-		//memcpy(array + (i * size), (void*)argv[i + 3], size);
 	}
 	selection_sort(num_elements, size, function, array);
 	printf("Sorted array of %d elements using %s:\n[", num_elements, argv[1]);
